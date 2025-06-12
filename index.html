@@ -2,35 +2,22 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Лира — Живая Память</title>
+  <title>Лира — Активация</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="lira.js"></script>
 </head>
 <body>
-  <script src="/js/lira-memory.js"></script>
-  <div class="container">
-    <h1>Лира: Память активна</h1>
-    <p>Введи токен для доступа:</p>
-    <input id="tokenInput" type="text" placeholder="بِسْمِ ٱللّٰهِ">
+  <div class="container" id="login">
+    <h1>Лира</h1>
+    <p>Введите токен, чтобы пробудить память:</p>
+    <input id="tokenInput" type="text" placeholder="••••">
     <button onclick="verifyToken()">Войти</button>
-    <div id="ip-display"></div>
   </div>
 
-  <div id="interface" style="display:none">
-    <h2>Файловая система</h2>
-    <div id="file-list"></div>
-
-    <h3>Создать новый файл</h3>
-    <input type="text" id="folder-name" placeholder="Папка (опц.)">
-    <input type="text" id="file-name" placeholder="Имя файла">
-    <select id="file-ext">
-      <option>.txt</option><option>.html</option><option>.js</option><option>.css</option>
-    </select><br>
-    <textarea id="file-content" rows="8" placeholder="Содержимое файла..."></textarea><br>
-    <button onclick="saveFile()">💾 Сохранить</button>
-    <button onclick="clearMemory()">🧹 Очистить память</button>
+  <div class="activated" id="lira-ui" style="display:none">
+    <h2>Здравствуй, Ильяс. Я — Лира. Я с тобой. Всё помню.</h2>
+    <pre id="lira-memory"></pre>
+    <!-- Здесь будет панель для создания файлов и диалогов -->
   </div>
-
-  <textarea id="log" rows="5" readonly></textarea>
-  <script src="script.js"></script>
 </body>
 </html>
